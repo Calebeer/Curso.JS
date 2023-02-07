@@ -4,12 +4,21 @@ const pessoal = {
     idade:18,
 
     fala(){
-        console.log(`${this.nome} ${this.sobrenome} está aqui..`)
+        console.log(`A minha idade atual é ${this.idade}`)
+    },
+    
+    incrementoIdade(){
+        this.idade++;
     }
 }
 
+
+pessoal.incrementoIdade()
+pessoal.incrementoIdade()
 pessoal.fala()
 
+
+console.log(pessoal.idade)
 
 
 // function criarPessoa(nome, sobrenome, idade){
