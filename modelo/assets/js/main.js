@@ -6,7 +6,7 @@ function calculoImc(){
         const peso = document.querySelector('#peso').value;
         const altura = document.querySelector('#altura').value;
         const result = document.querySelector('.resultado');
-    
+        
         
         cadastros.push({
             peso:parseFloat(peso),
@@ -14,10 +14,26 @@ function calculoImc(){
         });
         
         console.log(cadastros);
-        const resultado = ((peso / altura)** 2);
+        const resultado = (parseFloat(peso /(altura *altura))).toFixed(2);
         
-        result.innerHTML = `Seu IMC é ${resultado} <br>`;
-    
+        if (resultado == 0 && resultado == 18,5 ){
+           nome = "(Abaixo do peso)"
+        }else if (resultado >= 18,5 && resultado <= 24,99 ){
+            nome = "(Peso normal)"
+        }else if (resultado >= 25 && resultado <= 29,9){
+            nome = "(Sobrepeso)"
+        }else if(resultado >= 30 && resultado <= 34,9){
+            nome = "(Obesidade grau 1)"
+        }else if (resultado >= 35 && 39,9){
+            nome = "(Obesidade grau 2)"
+        }else{
+            nome = "(Obesidade grau 3)"
+        }
+         
+
+
+        result.innerHTML = `Seu IMC é ${resultado} ${nome} `;
+        
         
         
 

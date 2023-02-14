@@ -2,7 +2,7 @@
 // Eu posso ter vários else if
 // Só posso ter um else na checagem
 
-const hora = 30;
+const hora = 20;
 
 if (hora >= 0 && hora <= 11 ){
     console.log('Bom dia')
