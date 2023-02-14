@@ -56,3 +56,23 @@ form button {
 form button:hover {
   background: var(--primary-color-darker);
 } 
+
+#lista{
+  list-style: none;
+}
+
+.coluna{
+  display: flex;
+  justify-content: space-around;
+  
+}
+
+.resultado{
+  background-color:rgb(9, 184, 158) ;
+  
+}
+
+.resultado {
+  padding: 10px;
+  font-size: 24px;
+}
