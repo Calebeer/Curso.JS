@@ -12,10 +12,19 @@
 body {
   margin: 0;
   padding: 0;
-  background: var(--primary-color);
+  background-image: url('https://conteudo.imguol.com.br/blogs/235/files/2018/03/iStock-140465120-1024x681.jpg');
+  background-size: cover;
+  background-attachment: fixed;
+  background-repeat: repeat-y;
+  background-position: center center;
+  height: 100vh;
   font-family: 'Open sans', sans-serif;
   font-size: 1.3em;
   line-height: 1.5em;
+}
+
+h1{
+  text-align: center;
 }
 
 .container {
