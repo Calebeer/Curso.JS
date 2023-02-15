@@ -72,6 +72,10 @@ form button:hover {
   
 }
 
+.erro{
+  background-color: rgb(248, 101, 101);
+}
+
 /* .resultado {
   padding: 10px;
   font-size: 24px;
