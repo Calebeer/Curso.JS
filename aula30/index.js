@@ -28,13 +28,18 @@ switch(diaSemana){
 }
 }
 
-function textoSemana(texto){
+function zeroAEsquerda(num){
+    return num >= 10 ? num : `0${num}`;
+}
+
+function textoSemana(){
     const data = new Date()
     let diaSemana = data.getDay();
     const diaSemanaTexto = semanaDia(diaSemana)
 
     console.log(diaSemanaTexto)
     //resultado.innerHTML = diaSemanaTexto
+    return diaSemanaTexto
     
 }
 
@@ -81,22 +86,57 @@ switch(mesDia){
 }
 }
 
-function textoMes(texto){
+function textoMes(){
     const data = new Date()
     let mesDia = data.getMonth();
     const diaMesTexto = diaMes(mesDia)
 
     console.log(diaMesTexto)
     //resultado.innerHTML = diaMesTexto
-    
+    return diaMesTexto
 }
 
 function diaDoMes(){
     const data = new Date();
     let diaDoMes = data.getDate();
     console.log(diaDoMes)
+    return diaDoMes
 }
 
+function ano(){
+    const data = new Date();
+    let ano = data.getFullYear()
+    console.log(ano)
+    return ano
+}
+
+function hora(){
+    const data = new Date();
+    let hora = zeroAEsquerda(data.getHours());
+    let min = zeroAEsquerda(data.getMinutes());
+    let completo = `${hora}:${min}`
+    console.log(`${hora}:${min}`)
+    return completo
+}
+
+function texto(){
+    const resultado = document.querySelector('.texto')
+     const semana = textoSemana();
+     const dia = diaDoMes();
+     const mes = textoMes();
+     const esse = ano();
+     const horaH = hora();
+
+    resultado.innerHTML = `${semana}, ${dia} de ${mes} de ${esse} <br> ${horaH} `
+    
+
+}
+
+
+texto()
+hora()
+ano()
 diaDoMes()
 textoMes()
 textoSemana()
+
