@@ -141,11 +141,24 @@
 // textoSemana()
 
 
+function nomeMes(numeroMes){
+    const mes = ['janeiro','fevereiro','março','abril','maio','junho','julho','agosto','setembro','outubro','novembro','dezembro']
+    return mes [numeroMes]
+}
 
-const resultado = document.querySelector('.texto')
+function diaSemana(diaSemanaAqui){
+    const diasSemana = ['segunda','terça','quarta','quinta','sexta','sábado','domingo']
+    return diasSemana [diaSemanaAqui]
+}
+
 const data = new Date();
-const opcoes = {
-    dateStyle:'full',
-    timeStyle:'short'
-};
-resultado.innerHTML = data.toLocaleString('pt-BR', opcoes)
+const mes = nomeMes(data.getMonth())
+console.log(mes)
+
+// const resultado = document.querySelector('.texto')
+// const data = new Date();
+// const opcoes = {
+//     dateStyle:'full',
+//     timeStyle:'short'
+// };
+//resultado.innerHTML = data.toLocaleString('pt-BR', opcoes)
